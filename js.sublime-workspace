@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ret",
+				"return	(art.js)"
+			],
+			[
 				"mou",
 				"modulePath"
 			],
@@ -79,10 +83,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "pro",
+		"height": 338.0,
+		"last_filter": "comment",
 		"selected_items":
 		[
+			[
+				"comment",
+				"Snippet: Comment - Section header comment"
+			],
+			[
+				"new file",
+				"File: New File Relative to Current View"
+			],
+			[
+				"data",
+				"WordPress: Switch Database"
+			],
 			[
 				"pro",
 				"Project: Add Folder"
@@ -130,10 +146,6 @@
 			[
 				"git add",
 				"Git: Add..."
-			],
-			[
-				"comment",
-				"Snippet: Comment - Section header comment"
 			],
 			[
 				"git commi",
@@ -208,10 +220,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"new file",
-				"File: New File Relative to Current View"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			]
@@ -237,10 +245,24 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/brettdevore/Dev/wp-content/themes/js"
+		"/Users/brettdevore/Dev/wp-content/themes/js/assets",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/art",
+		"/Users/brettdevore/Dev/wp-content/themes/js/scss",
+		"/Users/brettdevore/Dev/wp-content/themes/js/scss/config",
+		"/Users/brettdevore/Dev/wp-content/themes/js/scss/site"
 	],
 	"file_history":
 	[
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/enqueue-scripts.php",
+		"/Users/brettdevore/Dev/wp-content/themes/js/header.php",
+		"/Users/brettdevore/Dev/wp-content/themes/js/scss/config/_custom-settings.scss",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.php",
+		"/Users/brettdevore/Dev/wp-content/themes/js/style.css",
+		"/Users/brettdevore/Dev/wp-content/themes/js/functions.php",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.css",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.js",
+		"/Users/brettdevore/Dev/wp-content/themes/js/library/art.php",
 		"/Users/brettdevore/Dev/wp-content/themes/fm/bower_components/foundation/css/foundation.css",
 		"/Users/brettdevore/Dev/wp-content/themes/fm/functions.php",
 		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/_normalize.scss",
@@ -318,7 +340,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -337,9 +359,16 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"heading",
+			"head",
+			"console",
+			"myplugin",
+			"product",
+			"Product",
+			"art",
 			"weight",
 			"$button-bg-color: $primary-color;",
 			"button",
@@ -422,6 +451,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"art",
+			"Art",
+			"Aart",
 			"</p><p>",
 			"<p></p>",
 			"<p>",
@@ -493,7 +525,7 @@
 	"project": "js.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 68.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -19,6 +19,8 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
 
+	wp_register_script( 'typekit', '//use.typekit.net/lic1cjb.js', null, null, false );
+
 	// Modernizr is used for polyfills and feature detection. Must be placed in header. (Not required).
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.8.3', false );
 
@@ -33,12 +35,12 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.5.2', true );
 
 	// Enqueue all registered scripts.
+	wp_enqueue_script( 'typekit' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'fastclick' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation' );
-
-	}
+}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 endif;
