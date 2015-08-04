@@ -4,16 +4,68 @@
 		"selected_items":
 		[
 			[
-				"ret",
-				"return	(art.js)"
+				"for",
+				"foreach	foreach …"
 			],
 			[
-				"mou",
-				"modulePath"
+				"prettyP",
+				"prettyprinted"
+			],
+			[
+				"pretty",
+				"prettyPrint"
+			],
+			[
+				"glob",
+				"globals	$GLOBALS['…']"
+			],
+			[
+				"fade",
+				"fadeOut	.fadeOut()"
+			],
+			[
+				"l",
+				"log"
 			],
 			[
 				"con",
-				"content"
+				"console"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"bac",
+				"background"
 			],
 			[
 				"inline",
@@ -26,10 +78,6 @@
 			[
 				"in",
 				"inline"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"side",
@@ -83,65 +131,49 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 338.0,
-		"last_filter": "comment",
+		"height": 207.0,
+		"last_filter": "remove",
 		"selected_items":
 		[
 			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
 				"comment",
-				"Snippet: Comment - Section header comment"
+				"Snippet: Comment - Full section comment"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add Current File"
 			],
 			[
 				"new file",
 				"File: New File Relative to Current View"
 			],
 			[
-				"data",
-				"WordPress: Switch Database"
+				"new f",
+				"File: New File Relative to Current View"
 			],
 			[
-				"pro",
-				"Project: Add Folder"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"wordpress s",
-				"WordPress: Switch Database"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
-				"str",
-				"StripHTML"
-			],
-			[
-				"stri",
-				"StripHTML"
-			],
-			[
-				"install ",
-				"Package Control: Install Package"
-			],
-			[
-				"git p",
-				"Git: Push"
+				"RENAME",
+				"File: Rename"
 			],
 			[
 				"git comm",
-				"Git: Quick Commit"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"git push",
-				"Git: Push"
+				"Git: Commit"
 			],
 			[
 				"git add",
@@ -172,16 +204,16 @@
 				"Git: Quick Commit"
 			],
 			[
-				"add",
-				"Git: Add Current File"
-			],
-			[
 				"push",
 				"Git: Push"
 			],
 			[
 				"side",
 				"View: Toggle Side Bar"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"lint",
@@ -204,15 +236,15 @@
 				"Git: Status"
 			],
 			[
-				"git com",
-				"Git: Commit"
-			],
-			[
 				"color scheme",
 				"SublimeLinter: Clear Color Scheme Folder"
 			],
 			[
 				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -224,7 +256,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 529.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -243,46 +275,65 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/brettdevore/Dev/wp-content/themes/js/assets",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/art",
-		"/Users/brettdevore/Dev/wp-content/themes/js/scss",
-		"/Users/brettdevore/Dev/wp-content/themes/js/scss/config",
-		"/Users/brettdevore/Dev/wp-content/themes/js/scss/site"
-	],
 	"file_history":
 	[
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/enqueue-scripts.php",
-		"/Users/brettdevore/Dev/wp-content/themes/js/header.php",
-		"/Users/brettdevore/Dev/wp-content/themes/js/scss/config/_custom-settings.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.php",
-		"/Users/brettdevore/Dev/wp-content/themes/js/style.css",
-		"/Users/brettdevore/Dev/wp-content/themes/js/functions.php",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.css",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/art/art.js",
-		"/Users/brettdevore/Dev/wp-content/themes/js/library/art.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/bower_components/foundation/css/foundation.css",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/functions.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/_normalize.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/foundation.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/site/_topbar.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/config/_custom-settings.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/shortcodes.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/buy-table/index.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/single-products.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/buy-table/buy-table.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/header.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/cleanup.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/enqueue-scripts.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/README.md",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/Gruntfile.js",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/scss/config/_settings.scss",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/css/foundation.css.map",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/library/buy-table/buy-table.php",
-		"/Users/brettdevore/Dev/wp-content/themes/fm/style.css",
-		"/Users/brettdevore/Dev/wp-content/themes/html5blank/src/css/sass/partials/untitled",
+		"/Users/brettdevore/Sites/jacquelinesecor.dev/wp-config.php",
+		"/Users/brettdevore/Sites/forevermints.dev/wp-content/themes/forevermints/functions.php",
+		"/Users/brettdevore/Sites/forevermints.dev/wp-content/themes/forevermints/library/theme-support.php",
+		"/Users/brettdevore/Sites/forevermints.dev/wp-content/themes/forevermints/library/shortcodes.php",
+		"/Users/brettdevore/Sites/index.php",
+		"/Users/brettdevore/Sites/forevermints.dev/wp-content/themes/forevermints/library/theme-settings.php",
+		"/Users/brettdevore/.bash_profile",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/script.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/index.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/style.css",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/functions.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/ace/ext-language_tools.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-hero/index.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-post-type.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/buy-table/index.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/README.md",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/codemirror.min.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/forevermints.sublime-project",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/post-css/custom-css.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-config.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/content-none.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/header.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-hero/product-hero.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-hero/style.css",
+		"/Users/brettdevore/asdf.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-hero/script.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/woocommerce.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/buy-table/script.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/product-hero/hero.scss",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/scss/config/_custom-settings.scss",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/js/custom/init-foundation.js",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/library/buy-table/buy-table.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/index.php",
+		"/Users/brettdevore/Development/forevermints.com/wp-content/themes/forevermints/fm.sublime-project",
+		"/Users/brettdevore/Development/index.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/scss/config/_custom-settings.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/product-hero/product-hero.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/scss/site/_hero.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/scss/foundation.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/buy-table/buy-table.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/product-hero/hero.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/functions.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/product-post-type.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/buy-table/index.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/single-products.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/product-hero/index.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/templates/hero.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/library/product-hero/style.css",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/scss/config/_settings.scss",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/js/custom/init-foundation.js",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/README.md",
+		"/Users/brettdevore/Dev/forevermints.com/wp-content/themes/forevermints/scss/site/_topbar.scss",
+		"/Users/brettdevore/Dev/wp-store.com/wp-cron.php",
+		"/Users/brettdevore/Dev/forevermints.com/wp-config.php",
+		"/Users/brettdevore/Wordpress/wp-content/themes/ForeverMints/functions.php",
+		"/Users/brettdevore/Wordpress/syncdb-config",
+		"/Users/brettdevore/Wordpress/wp-config.php",
 		"/Users/brettdevore/Dev/wp-content/themes/html5blank/src/css/sass/partials/nav.scss",
 		"/Users/brettdevore/Dev/wp-content/themes/html5blank/src/header.php",
 		"/Users/brettdevore/Dev/wp-content/themes/html5blank/README.md",
@@ -340,7 +391,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -348,64 +399,57 @@
 		"where_history":
 		[
 			"<project>",
-			"/Users/brettdevore/Dev/wp-content/themes/fm/scss/",
-			"/Users/brettdevore/Dev/wp-content/themes/fm/scss",
-			"/Users/brettdevore/Dev/wp-content/themes/fm",
+			"/Users/brettdevore/Development/forevermints.com/wp-content/themes",
 			"<project>",
-			"/Users/brettdevore/Dev/wp-content/themes/fm",
-			"",
+			"/Users/brettdevore/Dev/forevermints.com",
 			"<project>"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"ten",
+			"-top-ten",
+			"prettif",
+			"post_types",
+			"ace/",
+			"product-css",
+			"Typekit.load",
+			"hero_meta_save",
+			"99000",
+			"1.45",
+			"ul, ol, dl",
+			"        // checkbox.on(\"change\", function() {\n        //     if (this.checked)\n        //         $(this).closest('p').nextAll().fadeIn();\n        //     else\n        //         $(this).closest('p').nextAll().fadeOut().find(\"input\");\n        // });",
+			"line-he",
+			"line-height",
 			"heading",
-			"head",
-			"console",
-			"myplugin",
+			"h1",
+			"h1,h2,h3,h4,h5",
+			"unders",
+			"foundationpress_after_content",
+			"bold",
+			"$xlarge-breakpoint",
+			"max-width",
+			"62.5",
 			"product",
-			"Product",
-			"art",
-			"weight",
-			"$button-bg-color: $primary-color;",
-			"button",
+			"hero",
+			"$font-family-sans-serif",
+			"2.0",
+			"2.0833333333rem",
+			"33",
+			"33.33",
+			"17",
+			"62",
+			"6.25",
+			"line-height",
 			"$topbar-bg-color",
+			"top-bar",
 			".top-bar",
-			"-bg: $oil",
-			"$oil",
-			"#oil",
-			"Off Canvas ",
-			"$oil",
-			"#333",
-			"background: #333",
-			"background:#333",
-			"background",
-			"bckground",
-			"bckgroun",
-			".top-bar-section",
-			"background: #333",
-			".tab-bar{",
-			".tab-bar",
-			".contain-to-grid",
-			"}\n",
-			".top-bar",
-			"header",
-			"$oil",
-			"#333",
-			"&#8203",
-			"<p></p>",
-			"<p><p>",
-			"\n",
-			"&quot;",
-			"&nbsp;",
-			"foundationpress_before_content",
-			"counterDel",
-			"head",
-			"$body-font-family",
-			"type.scss",
+			"scss",
+			".name",
+			"h1",
 			"stock",
 			"js/",
 			"p ",
@@ -451,12 +495,7 @@
 		"regex": false,
 		"replace_history":
 		[
-			"art",
-			"Art",
-			"Aart",
-			"</p><p>",
-			"<p></p>",
-			"<p>",
+			"hero",
 			"",
 			"\" . \"_\" .",
 			"''",
@@ -480,7 +519,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -525,7 +564,7 @@
 	"project": "js.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -567,7 +606,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_width": 236.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

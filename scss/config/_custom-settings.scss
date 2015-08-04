@@ -4,13 +4,12 @@
 */
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "ff-dagny-web-pro", Helvetica, Arial, sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 $header-font-family: "Lato", arial;
 $header-font-weight: 200;
-$header-font-color: $jet;
 $header-line-height: 1.4;
 
 // We use these to define default font weights
@@ -37,6 +36,10 @@ $tuatara     : #444444;
 $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
+$mycolor 	 : rgb(146, 147, 136);
+$headcolor: 	rgb(37, 38, 27);
+$navcolor: #929388;
+$header-font-color: $headcolor;
 
 // We use these as default colors throughout
 $primary-color: #008CBA;
@@ -48,13 +51,12 @@ $info-color: #a0d3e8;
 
 // We use these to control various global styles
 $body-bg: $white;
-$body-font-color: $jet;
+$body-font-color: $mycolor;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $header-font-weight: 300;
 $header-text-rendering: optimizeLegibility;
-$topbar-link-weight: bold;
 
 // Media query breakpoints
 $small-breakpoint:  em-calc(640);
@@ -62,3 +64,32 @@ $medium-breakpoint: em-calc(1024);
 $topbar-breakpoint: em-calc(820);
 $large-breakpoint:  em-calc(1440);
 $xlarge-breakpoint: em-calc(1920);
+
+$topbar-height: rem-calc(120);
+$topbar-margin-bottom: 0;
+
+$topbar-title-weight: 200;
+$topbar-title-font-size: rem-calc(48);
+
+$topbar-link-color: $navcolor;
+$topbar-link-color-hover: $navcolor;
+$topbar-link-color-active: $navcolor;
+$topbar-link-color-active-hover: $navcolor;
+$topbar-link-weight: 200;
+$topbar-link-font-size: rem-calc(16);
+$topbar-link-hover-lightness: 0%; // Darken by 10%
+$topbar-link-bg-hover: $white;
+$topbar-link-bg-color-hover: $white;
+$topbar-link-bg-active: $white;
+$topbar-link-bg-active-hover: $white;
+$topbar-link-font-family: $body-font-family;
+$topbar-link-text-transform: uppercase;
+$topbar-link-font-weight: 200;
+$topbar-link-padding: rem-calc(10);
+$topbar-back-link-size: rem-calc(16);
+$topbar-link-dropdown-padding: rem-calc(20);
+$topbar-button-font-size: .75rem;
+$topbar-button-top: 7px;
+$topbar-bg-color: $white;
+
+$row-width: rem-calc(900);

@@ -51,3 +51,30 @@ blockquote.alignright,
 img.alignright {
 	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0;
+	line-height: 1em;
+	font-weight: 200;
+}
+
+.top-bar-container {
+	margin:0 0 0 0;
+}
+.top-bar .name h1 a {
+	font-weight: 200;
+	text-transform: uppercase;
+	margin: 0;
+	// margin-top: rem-calc(20);
+	// margin-bottom: rem-calc(50);
+}
+
+.top-bar-section {
+	padding: 0 0;
+}
+
+h1.art {
+	padding: rem-calc(33) 0;
+	border-top: 1px solid #cecfc7;
+
+}
