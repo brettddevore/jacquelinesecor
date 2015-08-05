@@ -6,7 +6,6 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0
  */
-
 get_header(); ?>
 
 <div class="row">
@@ -26,14 +25,14 @@ get_header(); ?>
 			<?php the_content(); ?>
 			</div>
 		</article>
+		<?php $post_stored_meta = get_post_meta( $post->ID ); ?>
 	<?php endwhile;?>
 	</div><!--/columns-->
 	<div class="small-12 large-4 columns">
-		<h1 class="art"><?php the_title(); ?></h1>
-		<p>medium</p>
-		<p>size</p>
-		<p>buy options</p>
-		<button>add cart</button>
+		<h1 class="art"><?php the_title(); ?></h1>	
+		<div class="art-info">
+		<div><?php echo $post_stored_meta['medium'][0]; ?></div>	
+		<div><?php echo $post_stored_meta['size'][0]; ?></div>
 	</div><!--/row-->
 
 </div><!--/row-->

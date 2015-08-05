@@ -54,7 +54,7 @@ img.alignright {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0;
-	line-height: 1em;
+	line-height: 1.05em;
 	font-weight: 200;
 }
 
@@ -76,5 +76,15 @@ h1, h2, h3, h4, h5, h6 {
 h1.art {
 	padding: rem-calc(33) 0;
 	border-top: 1px solid #cecfc7;
-
+	text-transform: uppercase;
+}
+#add-to-cart{
+	margin:40px 0 0 0;
+}
+.art-info *{
+	font-weight:200;
+}
+.art-info div {
+	line-height:1;
+	margin:0 0 16px 0;
 }

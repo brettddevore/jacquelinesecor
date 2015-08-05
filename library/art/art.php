@@ -49,25 +49,20 @@ add_action('init', 'arts_post_type');
 =============================================*/
 
 function art_add_meta_box() {
-
-	$screens = array( 'art' );
-	foreach ( $screens as $screen ) {
-		add_meta_box('art_sectionid',__( 'Art Piece Details', 'art_textdomain' ),'art_add_meta_box_callback',$screen);
-	}
+	add_meta_box('art_sectionid','Art Piece Details','art_add_meta_box_callback','art', 'side', 'high');
 }
 add_action( 'add_meta_boxes', 'art_add_meta_box' );
 
+$custom_fields = [
+		["text","size"],
+		["text","medium"],
+	];
 function art_add_meta_box_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'art_nonce' );
     $post_stored_meta = get_post_meta( $post->ID );
 
-    $custom_fields = [
-		["text","name"],
-		["text","size"],
-		["text","price"],
-		["image","photo"],
-		["text","medium"]
-	];
+    global $custom_fields;
+
 	echo "<div class='art'>";
 	$i=0;
     foreach ($custom_fields as $custom_field) {
@@ -95,8 +90,8 @@ function art_add_meta_box_callback( $post ) {
     	}
     	$i++;
 	}
-	
 	echo "</div>";
+
 	//echo "<pre>";
 	//var_dump($post_stored_meta);
 	//echo "</pre>";
@@ -116,18 +111,17 @@ function art_meta_save( $post_id ) {
         return;
     }
 
-    $custom_fields = [
-		["text","name"],
-		["text","size"],
-		["text","price"],
-		["image","photo"],
-		["text","medium"]
-	];
+    global $custom_fields;
+
 	$i = 0;
 	foreach ($custom_fields as $custom_field) {
 		if( isset( $_POST[ $custom_field[1]  ] ) ) {
         	update_post_meta( $post_id, $custom_field[1], sanitize_text_field( $_POST[ $custom_field[1] ] ) );
     	}
+	}
+	if( isset( $_POST[ ''  ] ) ) {
+        update_post_meta( $post_id, '', sanitize_text_field( $_POST[ '' ] ) );
+
 	}
 }
 
