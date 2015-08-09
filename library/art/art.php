@@ -1,52 +1,13 @@
 <?php
-
-/*=============================================
-=            Register Post Type           =
-=============================================*/
-
-
-function arts_post_type() {
-	register_taxonomy_for_object_type('category', 'art-work');
-	register_post_type('art',
-		array(
-			'labels' => array(
-				'name' => __('Art', 'art'),
-				'singular_name' => __('Art post', 'art'),
-				'add_new' => __('Add New', 'art'),
-				'add_new_item' => __('Add New Art Piece', 'art'),
-				'edit' => __('Edit', 'art'),
-				'edit_item' => __('Edit Art Piece', 'art'),
-				'new_item' => __('New Art Piece', 'art'),
-				'view' => __('View Art Piece', 'art'),
-				'view_item' => __('View Art Piece', 'art'),
-				'search_items' => __('Search Art Piece', 'art'),
-				'not_found' => __('No Art Pieces found', 'art'),
-				'not_found_in_trash' => __('No Art Pieces found in Trash', 'art'),
-			),
-			'public' => true,
-			'hierarchical' => true,
-			'has_archive' => true,
-			'supports' => array(
-				'title',
-				'editor',
-				'thumbnail',
-			),
-
-			'can_export' => true,
-			'taxonomies' => array(
-				'category',
-			),
-			'menu_icon' => 'dashicons-cart',
-			'capability_type' => 'post',
-		));
-}
-add_action('init', 'arts_post_type');
-/*-----  End of Section comment block  ------*/
-
-
 /*=============================================
 =            Add Meta Boxes            =
 =============================================*/
+
+function upload_dir() {
+	$upload_dir = wp_upload_dir();
+	return $upload_dir['baseurl'] . '/';
+}
+add_shortcode( 'upload_dir', 'upload_dir' );
 
 function art_add_meta_box() {
 	add_meta_box('art_sectionid','Art Piece Details','art_add_meta_box_callback','art', 'side', 'high');
@@ -91,10 +52,6 @@ function art_add_meta_box_callback( $post ) {
     	$i++;
 	}
 	echo "</div>";
-
-	//echo "<pre>";
-	//var_dump($post_stored_meta);
-	//echo "</pre>";
  ?>
  
 <?php }
@@ -111,17 +68,14 @@ function art_meta_save( $post_id ) {
         return;
     }
 
-    global $custom_fields;
-
-	$i = 0;
-	foreach ($custom_fields as $custom_field) {
-		if( isset( $_POST[ $custom_field[1]  ] ) ) {
-        	update_post_meta( $post_id, $custom_field[1], sanitize_text_field( $_POST[ $custom_field[1] ] ) );
-    	}
-	}
-	if( isset( $_POST[ ''  ] ) ) {
-        update_post_meta( $post_id, '', sanitize_text_field( $_POST[ '' ] ) );
-
+    global $typenow;
+	if ($typenow == 'art') {
+    	global $custom_fields;
+		foreach ($custom_fields as $custom_field) {
+			if( isset( $_POST[ $custom_field[1]  ] ) ) {
+        		update_post_meta( $post_id, $custom_field[1], $_POST[ $custom_field[1] ] );
+    		}
+		}
 	}
 }
 
@@ -156,3 +110,7 @@ function art_image_enqueue() {
 add_action('admin_enqueue_scripts', 'art_image_enqueue');
 
 /*-----  End of Load Scripts  ------*/
+
+/*=============================================
+=            Functions for content           =
+=============================================*/

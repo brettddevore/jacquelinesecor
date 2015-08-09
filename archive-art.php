@@ -18,32 +18,41 @@
 
 get_header(); ?>
 
+
 <div class="row">
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-12 columns" role="main">
 
+	<?php
 
-		<ul class="example-orbit" data-orbit data-options="bullets:false;variable_height;slide_number:false;timer_speed:5000";>
-		<?php query_posts($query_string . '&orderby=title&order=ASC'); ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php 
-				echo "<li>";
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail('medium');
-				}
-				echo "<div class=\"art-meta\">";
-				if (!has_term( 'diversity-of-nature', 'art_series', $post->ID )) {
-					echo the_title() . "<br />";
-				}
-				echo get_post_meta($post->ID,"medium",true) . "<br />";
-				echo get_post_meta($post->ID,"size",true) . "\"";
-				echo "</div>";
-				echo "</li>";
-				?>
-			
-			<?php endwhile; ?>
-		</ul>
-		
+// no default values. using these as examples
+
+	echo "<div class=\"row\">";
+	$tax =  'art_series';
+	$terms = get_terms( 'art_series', array( 'orderby' => 'name', 'order' => 'ASC', 'hide_empty' => true) );
+	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+		foreach ($terms as $term) {		
+			$term_link = get_term_link( $term );			
+				$args = array(       
+					'post_type' => 'attachment',
+					'post_status' => 'inherit',
+					$tax => $term->name,
+				);
+				$query = new WP_Query( $args );
+					foreach ($query->posts as $quer) {
+						echo "<div class=\"columns small-6 large-4\">";
+						echo "<p><a href=\"" . esc_url( $term_link ) . "\">" . $term->name . "</a></p>";
+						echo "<div>";	
+						echo "<a href=\"" . esc_url( $term_link ) . "\">";
+						echo "<img src=\"$quer->guid\">";
+						echo "</a>";
+						echo '</div>';
+						echo "</div>";
+					}						
+		}
+	}
+	echo "</div>";
+	?>
 
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -52,9 +61,8 @@ get_header(); ?>
 			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 		</nav>
 	<?php } ?>
-
 	</div>
+		<?//php get_sidebar(); ?>
 
-	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

@@ -61,10 +61,11 @@
 /* 
   My custom styles:
   Add your scss files below to structure your project styles
-*/ 
+*/
 
 @import "site/global"; 
 @import "site/wp-admin";
 @import "site/topbar";
 @import "site/hero";
 @import "site/footer";
+@import "site/custom";

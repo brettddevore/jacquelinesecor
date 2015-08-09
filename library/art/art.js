@@ -18,9 +18,16 @@ jQuery(document).ready(function($) {
         });
         meta_image_frame.on("select", function() {
             var media_attachment = meta_image_frame.state().get("selection").first().toJSON();
-            $this.prev().find("input").val(media_attachment.filename);
+            $this.prev().val(media_attachment.filename);
+            console.log($this.prev());
         });
         meta_image_frame.open();
 
     });
+    // $(".art").on("click", ".add_art_image", function(){
+    //     var i = $("input[name=counter]").val();
+    //     $(this).before('<div class="upload-image-wrap"><label>Image '+ i +': </label><input type="text" step="any" name="image-' + i + '" value=""><div class="upload-image">[+]</div></div>');
+    //     i = i + 1;
+    // });
+
 });

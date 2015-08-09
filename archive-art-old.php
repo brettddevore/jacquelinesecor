@@ -22,28 +22,49 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
+	<?php if ( have_posts() ) : ?>
 
-		<ul class="example-orbit" data-orbit data-options="bullets:false;variable_height;slide_number:false;timer_speed:5000";>
-		<?php query_posts($query_string . '&orderby=title&order=ASC'); ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php 
-				echo "<li>";
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail('medium');
-				}
-				echo "<div class=\"art-meta\">";
-				if (!has_term( 'diversity-of-nature', 'art_series', $post->ID )) {
-					echo the_title() . "<br />";
-				}
-				echo get_post_meta($post->ID,"medium",true) . "<br />";
-				echo get_post_meta($post->ID,"size",true) . "\"";
-				echo "</div>";
-				echo "</li>";
-				?>
-			
-			<?php endwhile; ?>
-		</ul>
+		<?php /* Start the Loop */ ?>
+
+		<ul class="example-orbit" data-orbit data-options="bullets:false">
+<?php
+
+	$args = array(
+				'post_type' => array('art'),
+				'orderby' => 'title',
+				'order' => 'asc',
+				'category_name'          => 'vaginas',
+				'showposts' => -1000,
+				'posts_per_page' => 1000,
+
+	);
+	$myPosts = new WP_Query($args);
+	$content  = '';
+	while ($myPosts->have_posts()) : $myPosts->the_post();
+		echo "<li>";
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail();
+		}
+		echo "</li>";
+	endwhile;
+	echo $content;
+?>
+	</ul>
+
+<!--   <li class="active">
+    <?php the_post_thumbnail(); ?>
+    <div class="orbit-caption">
+    <?php get_the_title();?>
+    </div>
+  </li> -->
+
+
 		
+
+
+	<?php else : ?>
+		<?php get_template_part( 'content', 'none' ); ?>
+	<?php endif; // End have_posts() check. ?>
 
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -54,7 +75,6 @@ get_header(); ?>
 	<?php } ?>
 
 	</div>
-
 	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
