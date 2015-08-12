@@ -66,4 +66,20 @@ h2.title {
 .art-nav{ width: 100%;}
 .previous-art{float:left;}
 .next-art{float:right}
-.art-meta{line-height: 22px; text-transform: lowercase;}
+.next-art a, .previous-art a {color:inherit}
+.art-meta{line-height: 22px; text-transform: lowercase;font-weight:200;margin-bottom: 20px;}
+.piece-count {
+	
+}
+.piece-count a{
+	color: $mycolor;
+	font-weight:200;
+}
+p.series-title  {
+	margin: 0 0 6px 0;
+    font-size: rem-calc(20px);
+    font-weight:200;
+}
+.series-title a {
+	color: $mycolor;
+}

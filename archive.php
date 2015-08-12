@@ -22,14 +22,17 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
-
-		<ul class="example-orbit" data-orbit data-options="bullets:false;variable_height;slide_number:false;timer_speed:5000";>
-		<?php query_posts($query_string . '&orderby=title&order=ASC'); ?>
+		<?//php query_posts($query_string . '&orderby=title&order=ASC'); ?>
+			<?php $i=1; ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php 
-				echo "<li>";
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail('medium');
+				echo "<div class=\"art-wrap\">";				
+				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+				$url = $thumb['0'];
+				if ($i > 4) {
+					echo "<img class=\"lazy\" data-original=\"{$url}\" />"; 
+				} else {
+					echo "<img src=\"{$url}\" />"; 
 				}
 				echo "<div class=\"art-meta\">";
 				if (!has_term( 'diversity-of-nature', 'art_series', $post->ID )) {
@@ -38,12 +41,11 @@ get_header(); ?>
 				echo get_post_meta($post->ID,"medium",true) . "<br />";
 				echo get_post_meta($post->ID,"size",true) . "\"";
 				echo "</div>";
-				echo "</li>";
+				echo "</div>";
+				$i++;
 				?>
 			
 			<?php endwhile; ?>
-		</ul>
-		
 
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>

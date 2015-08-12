@@ -17,6 +17,7 @@ add_action( 'add_meta_boxes', 'art_add_meta_box' );
 $custom_fields = [
 		["text","size"],
 		["text","medium"],
+        ["number","importance"],
 	];
 function art_add_meta_box_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'art_nonce' );
@@ -49,6 +50,17 @@ function art_add_meta_box_callback( $post ) {
     		$code .= '</p>';
     		echo $code;
     	}
+        elseif ($custom_field[0] == "number"){
+            $code =  "<p>";
+            $code .= "<label for=\"".$custom_field[1]."\">".$custom_field[1]."</label>";
+            $code .= '<input type="number" step="any" name="'.$custom_field[1].'" value="';
+            if ( isset ( $post_stored_meta[$custom_field[1]][0] ) ) {
+                $code .= $post_stored_meta[$custom_field[1]][0];
+            }
+            $code .= '"/>';
+            $code .= '</p>';
+            echo $code;
+        }
     	$i++;
 	}
 	echo "</div>";

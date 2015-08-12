@@ -70,9 +70,9 @@ get_header();
 		?>
 		<div class="art-nav">
 
-		<div class="previous-art"><?php previous_post_link( '%link', 'Previous Piece', FALSE ); ?>
+		<div class="previous-art"><?php previous_post_link( '%link', '&laquo; previous piece', FALSE ); ?>
 </div>
-		<div class="next-art"><?php next_post_link( '%link', 'Next Piece', FALSE ); ?>
+		<div class="next-art"><?php next_post_link( '%link', 'next piece &raquo;', FALSE ); ?>
 </div>
 		</div><!--/.end post nav-->
 	</div><!--/row-->

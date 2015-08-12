@@ -30,9 +30,10 @@ get_header(); ?>
 	echo "<div class=\"row\">";
 	$tax =  'art_series';
 	$terms = get_terms( 'art_series', array( 'orderby' => 'name', 'order' => 'ASC', 'hide_empty' => true) );
+
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-		foreach ($terms as $term) {		
-			$term_link = get_term_link( $term );			
+		foreach ($terms as $term) {
+		$term_link = get_term_link( $term );								
 				$args = array(       
 					'post_type' => 'attachment',
 					'post_status' => 'inherit',
@@ -40,18 +41,24 @@ get_header(); ?>
 				);
 				$query = new WP_Query( $args );
 					foreach ($query->posts as $quer) {
-						echo "<div class=\"columns small-6 large-4\">";
-						echo "<p><a href=\"" . esc_url( $term_link ) . "\">" . $term->name . "</a></p>";
-						echo "<div>";	
+						echo "<div class=\"columns small-12 large-4\">";
+						echo "<p class=\"series-title\"><a href=\"" . esc_url( $term_link ) . "\">" . $term->name ."</a></p>";
 						echo "<a href=\"" . esc_url( $term_link ) . "\">";
 						echo "<img src=\"$quer->guid\">";
 						echo "</a>";
-						echo '</div>';
-						echo "</div>";
+						echo "<div class=\"piece-count\">";
+						if ($term->count > 1) {
+							echo "<a href=\"" . esc_url( $term_link ) . "\">" . "1 of " . $term->count . " pieces" . "</a>";
+						} else {
+							echo "<a href=\"" . esc_url( $term_link ) . "\">" . "1 piece" . "</a>";
+						}
+						echo '</div><!--/.piece-count-->';						
+						echo '</div><!--/.columns-->';	
 					}						
-		}
+		}		
 	}
-	echo "</div>";
+	echo "</div><!--/.row-->";
+
 	?>
 
 	<?php /* Display navigation to next/previous pages when applicable */ ?>

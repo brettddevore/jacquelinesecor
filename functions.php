@@ -109,30 +109,6 @@ function my_post_gallery($output, $attr) {
 }
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-// function filter_next_post_sort($sort) {
-//     $sort = "ORDER BY p.post_title ASC LIMIT 1";
-//     return $sort;
-// }
-// function filter_next_post_where($where) {
-//     global $post, $wpdb;
-//     return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish'",$post->post_title);
-// }
-
-// function filter_previous_post_sort($sort) {
-//     $sort = "ORDER BY p.post_title DESC LIMIT 1";
-//     return $sort;
-// }
-// function filter_previous_post_where($where) {
-//     global $post, $wpdb;
-//     return $wpdb->prepare("WHERE p.post_title < '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish'",$post->post_title);
-// }
-
-// add_filter('get_next_post_sort',   'filter_next_post_sort');
-// add_filter('get_next_post_where',  'filter_next_post_where');
-
-// add_filter('get_previous_post_sort',  'filter_previous_post_sort');
-// add_filter('get_previous_post_where', 'filter_previous_post_where');
-
 /*=============================================
 =            Register Post Type           =
 =============================================*/
@@ -251,3 +227,29 @@ function add_image(){
     echo "</div>";
 }
 add_action('before_art_piece','add_image');
+
+
+
+function custom_taxonomy_order( $query ) {
+    if ( $query->is_tax('art_series') && $query->is_main_query() ) {       
+        $query->set( 'post_per_page', -1 );
+        $query->set( 'meta_key', 'importance' );
+        $query->set( 'meta_type', 'NUMERIC' );
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'order', 'ASC' );           
+    }
+}
+add_action( 'pre_get_posts', 'custom_taxonomy_order' );
+
+function preloadHTML() {
+    if (is_front_page()) {
+        echo "<link rel=\"prerender\" href=\"http://jacquelinesecor.com/art/\" />";
+    }
+    if(is_archive()) {
+        echo "<link rel=\"prerender\" href=\"http://jacquelinesecor.com/series/diversity-of-nature/\" />";
+        echo "<link rel=\"prerender\" href=\"http://jacquelinesecor.com/series/defying-extinction/\" />";
+    }
+   
+}
+add_action( 'foundationpress_before_closing_body', 'preloadHTML');
+
